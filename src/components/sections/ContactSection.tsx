@@ -40,7 +40,7 @@ export function ContactSection() {
             {/* Office Address */}
             <div className="flex items-start gap-6 group">
               <a
-                href="https://www.google.com/maps/place/20,+Madhava+Krishna+St,+Rkv+Nagar,+Ramanuja+Nagar,+Erode,+Tamil+Nadu+638001/@11.3443123,77.7296342,17z"
+                href="https://www.google.com/maps/place/SRI+KUMARR+CLOTH+STORES/@11.3434052,77.7316259,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba96f44fcb59051:0xebb1104fe9c45e28!8m2!3d11.3434052!4d77.7316259!16s%2Fg%2F11b7vz9kzm?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="View on Google Maps"
@@ -51,7 +51,7 @@ export function ContactSection() {
               <div className="space-y-2 border-b border-white/10 pb-8 w-full">
                 <h4 className="text-xl md:text-2xl font-bold font-heading text-white">Office Address</h4>
                 <a
-                  href="https://www.google.com/maps/place/20,+Madhava+Krishna+St,+Rkv+Nagar,+Ramanuja+Nagar,+Erode,+Tamil+Nadu+638001/@11.3443123,77.7296342,17z"
+                  href="https://www.google.com/maps/place/SRI+KUMARR+CLOTH+STORES/@11.3434052,77.7316259,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba96f44fcb59051:0xebb1104fe9c45e28!8m2!3d11.3434052!4d77.7316259!16s%2Fg%2F11b7vz9kzm?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noreferrer"
                   className="block text-lg text-brand-secondary/70 hover:text-brand-accent transition-colors leading-relaxed"

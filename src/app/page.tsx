@@ -31,7 +31,7 @@ export default function Home() {
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
         {/* Location Button */}
         <a 
-          href="https://www.google.com/maps/place/20,+Madhava+Krishna+St,+Rkv+Nagar,+Ramanuja+Nagar,+Erode,+Tamil+Nadu+638001/@11.3443123,77.7296342,17z"
+          href="https://www.google.com/maps/place/SRI+KUMARR+CLOTH+STORES/@11.3434052,77.7316259,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba96f44fcb59051:0xebb1104fe9c45e28!8m2!3d11.3434052!4d77.7316259!16s%2Fg%2F11b7vz9kzm?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           rel="noreferrer"
           className="w-14 h-14 bg-brand-primary text-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300 hover:shadow-brand-primary/50 flex items-center justify-center group"
