@@ -387,8 +387,13 @@ const productSchema = {
   "@type": "Product",
   "@id": `${SITE_URL}/#product-cotton-dhoti`,
   name: "Premium Cotton Dhoti – Wholesale",
+  image: [
+    `${SITE_URL}/product-images/we-3.png`,
+    `${SITE_URL}/product-images/we-4.png`
+  ],
   description:
     "Handcrafted premium cotton dhotis in white and off-white, available in 2-yard, 4-yard and 8-yard lengths. Soft texture, durable weave. Minimum wholesale order 50 pieces.",
+  sku: "WK-DHOTI-001",
   brand: { "@id": `${SITE_URL}/#organization` },
   manufacturer: { "@id": `${SITE_URL}/#organization` },
   category: "Traditional Clothing / Dhoti",
@@ -398,6 +403,7 @@ const productSchema = {
     "@type": "Offer",
     availability: "https://schema.org/InStock",
     priceCurrency: "INR",
+    price: "150.00",
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "INR",
