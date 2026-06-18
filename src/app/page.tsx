@@ -3,12 +3,15 @@ import { Footer } from "@/components/Footer";
 import { MapPin, Phone } from "lucide-react";
 
 import { HeroSection } from "@/components/sections/HeroSection";
-import { AboutSection } from "@/components/sections/AboutSection";
 import { ProductsSection } from "@/components/sections/ProductsSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";
-import { GallerySection } from "@/components/sections/GallerySection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+
+// Section order as requested:
+// 1. Hero  2. Products  3. About Us  4. Why Choose Us  5. Testimonials  6. Contact
+// Gallery ("Our Collection") removed as per user request.
 
 export default function Home() {
   return (
@@ -16,12 +19,22 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-grow">
+        {/* 1 — Hero */}
         <HeroSection />
-        <AboutSection />
+
+        {/* 2 — Our Products */}
         <ProductsSection />
+
+        {/* 3 — About Us */}
+        <AboutSection />
+
+        {/* 4 — Why Choose Us */}
         <WhyChooseUsSection />
-        <GallerySection />
+
+        {/* 5 — Testimonials */}
         <TestimonialsSection />
+
+        {/* 6 — Contact */}
         <ContactSection />
       </main>
 

@@ -59,7 +59,7 @@ export function HeroSection() {
               {/* Bottom Middle Image Card */}
               <div className="relative p-6 md:p-8 flex flex-col justify-end min-h-[250px] sm:aspect-square sm:max-h-[320px] bg-[#221711] overflow-hidden group shadow-2xl">
                 <div className="absolute inset-0 z-0">
-                  <Image src="/images/product_kasavu_combo.png" alt="Featured Product" fill className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/product-images/we-3.png" alt="Wedding Pattu Combos" fill className="object-cover object-center lg:object-[50%_75%] opacity-80 group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-[#0c0a09]/20 to-transparent"></div>
                 </div>
                 
@@ -68,7 +68,7 @@ export function HeroSection() {
                      <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 lg:w-4 lg:h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                   </div>
                   <h3 className="text-[#d4af37] font-bold uppercase tracking-wider text-xs sm:text-sm md:text-base leading-snug drop-shadow-md">
-                    PREMIUM<br/>KASAVU COMBOS
+                    WEDDING<br/>PATTU COMBOS
                   </h3>
                 </div>
               </div>
@@ -79,15 +79,14 @@ export function HeroSection() {
           {/* Right Column (Stacked Cards) */}
           <div className="lg:col-span-4 flex flex-col h-full gap-4 lg:gap-2 mt-8 lg:mt-0">
             {/* Top Right Card */}
-            <div className="bg-[#2a1c12] p-6 lg:p-8 flex flex-col relative h-[280px] sm:h-[350px] lg:h-[45vh] lg:min-h-[350px] group overflow-hidden shadow-2xl">
-              <div className="relative z-10 drop-shadow-xl bg-black/10 w-fit p-1 rounded-sm backdrop-blur-[2px]">
-                <p className="text-[10px] lg:text-xs text-white/80 uppercase tracking-widest font-semibold mb-1 drop-shadow-md">Premium Quality</p>
-                <h3 className="text-xl lg:text-2xl font-serif text-white drop-shadow-lg">Classic Dhoti Sets</h3>
+            <div className="bg-[#2a1c12] p-6 lg:p-8 flex flex-col justify-end relative h-[280px] sm:h-[350px] lg:h-[45vh] lg:min-h-[350px] group overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-105">
+                <Image src="/product-images/we-9.png" alt="Classic Dhoti Sets" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none"></div>
               </div>
-              <div className="absolute -bottom-2 -right-2 lg:-bottom-6 lg:-right-6 w-[80%] h-[80%] z-0 transition-transform duration-700 group-hover:scale-110">
-                <div className="relative w-full h-full">
-                  <Image src="/images/product_dhoti_stripe.png" alt="Dhoti" fill className="object-contain drop-shadow-2xl" />
-                </div>
+              <div className="relative z-10 w-fit mb-4">
+                <p className="text-[10px] lg:text-xs text-white/90 uppercase tracking-widest font-semibold mb-1 drop-shadow-md">Premium Quality</p>
+                <h3 className="text-xl lg:text-2xl font-serif text-white drop-shadow-lg">Classic Dhoti Sets</h3>
               </div>
               
               {/* Little decorative dots */}
@@ -106,19 +105,17 @@ export function HeroSection() {
             {/* Bottom Right Card */}
             <div className="bg-[#38271a] p-6 lg:p-8 flex flex-col relative h-[280px] sm:h-[350px] lg:h-[45vh] lg:min-h-[350px] group overflow-hidden shadow-2xl">
               <div className="relative z-20 flex justify-between items-start drop-shadow-xl">
-                <div className="pr-4 bg-black/10 p-1 rounded-sm backdrop-blur-[2px] w-fit">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif text-white leading-tight drop-shadow-lg">Handpicked<br/>Designer Shirts</h3>
+                <div className="pr-4 bg-black/20 p-2 rounded-sm backdrop-blur-[2px] w-fit">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif text-white leading-tight drop-shadow-lg">Color Shirt &<br/>Dhoti Sets</h3>
                 </div>
                 <a href="#products" className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border border-white/50 flex items-center justify-center hover:bg-white hover:text-black transition-colors shrink-0 bg-black/20 backdrop-blur-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 lg:w-4 lg:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m7 17 9.2-9.2M17 17V7H7"/></svg>
                 </a>
               </div>
-              <div className="absolute bottom-0 right-0 w-full h-[85%] lg:h-[80%] z-0 transition-transform duration-700 group-hover:scale-105">
+              <div className="absolute bottom-0 right-0 w-full h-[100%] z-0 transition-transform duration-700 group-hover:scale-105">
                 <div className="relative w-full h-full">
-                  <Image src="/images/product_copper_linen.png" alt="Shirts" fill className="object-cover object-top opacity-90 mix-blend-luminosity" />
-                  {/* overlay to make it blend into brown */}
-                  <div className="absolute inset-0 bg-[#38271a]/30 mix-blend-overlay"></div>
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#38271a] via-[#38271a]/60 to-transparent"></div>
+                  <Image src="/product-images/we-4.png" alt="Color Shirt and Dhoti Sets" fill className="object-cover opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#38271a]/90 via-[#38271a]/20 to-transparent"></div>
                 </div>
               </div>
             </div>

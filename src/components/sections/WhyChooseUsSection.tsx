@@ -1,12 +1,36 @@
+"use client";
+
 import { Award, ShieldCheck, Factory, Truck, Users, MapPin } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 export function WhyChooseUsSection() {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-12");
+            observerRef.current?.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    const elements = document.querySelectorAll(".scroll-animate-card");
+    elements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => observerRef.current?.disconnect();
+  }, []);
   const features = [
     { 
       icon: Award, 
       title: "36+ Years of Experience", 
       desc: "A legacy of trust built since 1988 in the heart of Tamil Nadu's textile industry.",
-      bgImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+      bgImage: "/images/textile_heritage_loom.png"
     },
     { 
       icon: ShieldCheck, 
@@ -69,7 +93,8 @@ export function WhyChooseUsSection() {
           {features.map((feature, i) => (
             <div 
               key={i} 
-              className="group relative border border-white/10 rounded-3xl transition-all duration-500 hover:-translate-y-2 overflow-hidden h-[340px] md:h-[380px] bg-brand-primary"
+              className="scroll-animate-card opacity-0 translate-y-12 group relative border border-white/10 rounded-3xl transition-all duration-700 hover:-translate-y-2 overflow-hidden h-[340px] md:h-[380px] bg-brand-primary"
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
               {/* Background Image */}
               <div 
