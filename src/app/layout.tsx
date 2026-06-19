@@ -142,8 +142,20 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/images/og-image.jpg`],
   },
 
-  // ── Favicon — Next.js file convention handles src/app/icon.svg auto ───────
-  // (favicon.ico removed; Next.js auto-serves icon.svg with cache-busting QS)
+  // ── Favicon / App Icons ───────────────────────────────────────────────────
+  // Google Search reads the <link rel="icon"> tag; it prefers PNG over SVG.
+  // Next.js serves icon.png (from src/app/) as the canonical favicon PNG.
+  // apple-icon.png is served for iOS home-screen / Safari tab icons.
+  icons: {
+    shortcut: "/favicon.png",            // legacy <link rel="shortcut icon">
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/icon.png",    type: "image/png", sizes: "any" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", type: "image/png" },
+    ],
+  },
 
   // ── Google Search Console verification ───────────────────────────────────
   verification: {
@@ -169,7 +181,7 @@ const organizationSchema = {
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE_URL}/icon.svg`,
+    url: `${SITE_URL}/favicon.png`,   // PNG preferred by Google Knowledge Panel
     width: 512,
     height: 512,
   },

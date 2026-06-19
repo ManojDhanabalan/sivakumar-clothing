@@ -1,7 +1,7 @@
  "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const WHATSAPP_NUMBER = "919443082462";
@@ -45,7 +45,7 @@ const ALL_PRODUCTS = [
     wa: WHATSAPP_BASE,
   },
   {
-    name: "COLOR DHOTI & SHIRT SET",
+    name: "COLOR DHOTI",
     desc: "Make a statement with our deep solid colored dhotis in rich red, emerald green, and royal blue.",
     img: "/product-images/we-6.png",
     tag: "New",
@@ -66,7 +66,7 @@ const ALL_PRODUCTS = [
     wa: WHATSAPP_BASE,
   },
   {
-    name: "UNSTITCHED SHIRTING FABRIC",
+    name: "DHOTI FABRICS",
     desc: "Premium unstitched fabric in elegant pastel shades. Perfect for custom tailoring and boutique orders.",
     img: "/product-images/we-10.png",
     tag: "Fabric",
@@ -107,8 +107,25 @@ function WAIcon({ className = "w-5 h-5" }: { className?: string }) {
 export function ProductsSection() {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
 
-  const openLightbox = (idx: number) => setLightboxIdx(idx);
-  const closeLightbox = () => setLightboxIdx(null);
+  const openLightbox = (idx: number) => {
+    setLightboxIdx(idx);
+    window.history.pushState({ lightbox: true }, "");
+  };
+
+  const closeLightbox = () => {
+    setLightboxIdx(null);
+    if (typeof window !== "undefined" && window.history.state?.lightbox) {
+      window.history.back();
+    }
+  };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setLightboxIdx(null);
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
   const prevImg = () => setLightboxIdx((i) => (i === null ? null : (i - 1 + ALL_PRODUCTS.length) % ALL_PRODUCTS.length));
   const nextImg = () => setLightboxIdx((i) => (i === null ? null : (i + 1) % ALL_PRODUCTS.length));
 
