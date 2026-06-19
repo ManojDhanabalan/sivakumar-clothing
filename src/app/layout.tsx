@@ -395,6 +395,8 @@ const faqSchema = {
 };
 
 // ── 6. Product Schema (feeds Google Shopping panel & AI product knowledge) ────
+// Critical fix: brand/manufacturer must use @type+name (not @id refs).
+// Offer must have `url` + `priceValidUntil`. Remove non-standard Offer props.
 const productSchema = {
   "@type": "Product",
   "@id": `${SITE_URL}/#product-cotton-dhoti`,
@@ -406,28 +408,29 @@ const productSchema = {
   description:
     "Handcrafted premium cotton dhotis in white and off-white, available in 2-yard, 4-yard and 8-yard lengths. Soft texture, durable weave. Minimum wholesale order 50 pieces.",
   sku: "WK-DHOTI-001",
-  brand: { "@id": `${SITE_URL}/#organization` },
-  manufacturer: { "@id": `${SITE_URL}/#organization` },
+  brand: {
+    "@type": "Brand",
+    name: "WEEKAAS",
+  },
+  manufacturer: {
+    "@type": "Organization",
+    name: "Sri Kumarr Cloth Stores",
+    url: SITE_URL,
+  },
   category: "Traditional Clothing / Dhoti",
   material: "100% Cotton",
   countryOfOrigin: "IN",
   offers: {
     "@type": "Offer",
+    url: SITE_URL,
     availability: "https://schema.org/InStock",
     priceCurrency: "INR",
     price: "150.00",
-    priceSpecification: {
-      "@type": "PriceSpecification",
-      priceCurrency: "INR",
-      minPrice: "150",
-      maxPrice: "800",
-    },
-    seller: { "@id": `${SITE_URL}/#organization` },
-    areaServed: { "@type": "Country", name: "India" },
-    eligibleQuantity: {
-      "@type": "QuantitativeValue",
-      minValue: 50,
-      unitText: "pieces",
+    priceValidUntil: "2027-12-31",
+    seller: {
+      "@type": "Organization",
+      name: "Sri Kumarr Cloth Stores",
+      url: SITE_URL,
     },
   },
   aggregateRating: {
@@ -435,6 +438,7 @@ const productSchema = {
     ratingValue: "4.8",
     reviewCount: "500",
     bestRating: "5",
+    worstRating: "1",
   },
 };
 
