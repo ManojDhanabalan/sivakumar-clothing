@@ -44,9 +44,9 @@ export function HeroSection() {
                     <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full border-2 border-[#0c0a09] overflow-hidden relative"><Image src="/images/hero_banner.png" alt="preview" fill className="object-cover" /></div>
                     <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full border-2 border-[#0c0a09] overflow-hidden relative"><Image src="/images/product_dhoti_stripe.png" alt="preview" fill className="object-cover" /></div>
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-medium leading-tight mb-2 lg:mb-4 drop-shadow-sm">
+                  <p className="text-lg sm:text-xl md:text-2xl font-heading font-medium leading-tight mb-2 lg:mb-4 drop-shadow-sm">
                     Manufacturers of<br/>Premium Quality<br/>Clothing
-                  </h3>
+                  </p>
                   <p className="text-white/60 text-xs sm:text-sm leading-relaxed mb-4 lg:mb-6">
                     Cotton Dhotis, Shirts & Fabrics with uncompromising quality.
                   </p>
@@ -67,9 +67,9 @@ export function HeroSection() {
                   <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border border-[#d4af37]/50 flex items-center justify-center mb-12 lg:mb-16 text-[#d4af37] backdrop-blur-sm">
                      <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 lg:w-4 lg:h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                   </div>
-                  <h3 className="text-[#d4af37] font-bold uppercase tracking-wider text-xs sm:text-sm md:text-base leading-snug drop-shadow-md">
+                  <p className="text-[#d4af37] font-bold uppercase tracking-wider text-xs sm:text-sm md:text-base leading-snug drop-shadow-md">
                     WEDDING<br/>PATTU COMBOS
-                  </h3>
+                  </p>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@ export function HeroSection() {
               </div>
               <div className="relative z-10 w-fit mb-4">
                 <p className="text-[10px] lg:text-xs text-white/90 uppercase tracking-widest font-semibold mb-1 drop-shadow-md">Premium Quality</p>
-                <h3 className="text-xl lg:text-2xl font-serif text-white drop-shadow-lg">Classic Dhoti Sets</h3>
+                <p className="text-xl lg:text-2xl font-serif text-white drop-shadow-lg">Classic Dhoti Sets</p>
               </div>
               
               {/* Little decorative dots */}
@@ -106,7 +106,7 @@ export function HeroSection() {
             <div className="bg-[#38271a] p-6 lg:p-8 flex flex-col relative h-[280px] sm:h-[350px] lg:h-[45vh] lg:min-h-[350px] group overflow-hidden shadow-2xl">
               <div className="relative z-20 flex justify-between items-start drop-shadow-xl">
                 <div className="pr-4 bg-black/20 p-2 rounded-sm backdrop-blur-[2px] w-fit">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif text-white leading-tight drop-shadow-lg">Color Shirt &<br/>Dhoti Sets</h3>
+                  <p className="text-lg sm:text-xl md:text-2xl font-serif text-white leading-tight drop-shadow-lg">Color Shirt &<br/>Dhoti Sets</p>
                 </div>
                 <a href="#products" className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border border-white/50 flex items-center justify-center hover:bg-white hover:text-black transition-colors shrink-0 bg-black/20 backdrop-blur-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 lg:w-4 lg:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m7 17 9.2-9.2M17 17V7H7"/></svg>

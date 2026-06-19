@@ -34,15 +34,15 @@ const BUSINESS_NAME = "WEEKAAS | Sri Kumarr Cloth Stores";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
-  // ── Title (≤ 60 chars) ────────────────────────────────────────────────────
+  // ── Title — includes top missing keywords: quality, sri kumarr, dhotis ────
   title: {
-    default: "WEEKAAS – Cotton Dhoti & Shirt Manufacturer in Erode",
-    template: "%s | WEEKAAS Erode",
+    default: "Sri Kumarr Cloth Stores – Quality Cotton Dhotis & Shirts, Erode",
+    template: "%s | Sri Kumarr Cloth Stores Erode",
   },
 
-  // ── Description (150-160 chars, answer-first, local + entity signals) ─────
+  // ── Description (150-160 chars) — includes 'years', 'quality', 'dhotis' ──
   description:
-    "Sri Kumarr Cloth Stores (WEEKAAS), Erode's #1 cotton dhoti & shirt manufacturer since 1988. Wholesale & bulk orders pan-India. Call +91 94430 82462.",
+    "Sri Kumarr Cloth Stores (WEEKAAS) — 38 years of quality cotton dhotis & shirts manufacturing in Erode. Wholesale & bulk orders pan-India. Call +91 94430 82462.",
 
   // ── Extended keyword bank (hyperlocal × product × intent) ─────────────────
   keywords: [
@@ -92,11 +92,12 @@ export const metadata: Metadata = {
   publisher: "WEEKAAS",
   category: "Clothing & Textile Manufacturing",
 
-  // ── Canonical + alternate languages ───────────────────────────────────────
+  // ── Canonical + alternate languages (GEO signal for en-IN targeting) ──────
   alternates: {
     canonical: SITE_URL,
     languages: {
       "en-IN": SITE_URL,
+      "en":    SITE_URL,
     },
   },
 
@@ -462,7 +463,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-IN"
       className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} scroll-smooth antialiased bg-[#f4f4f5]`}
     >
       <head>

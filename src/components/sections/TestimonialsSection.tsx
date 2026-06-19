@@ -85,9 +85,9 @@ function StarRating({ count }: { count: number }) {
   );
 }
 
-function TestimonialCard({ t }: { t: typeof TESTIMONIALS[0] }) {
+function TestimonialCard({ t, "aria-hidden": ariaHidden }: { t: typeof TESTIMONIALS[0]; "aria-hidden"?: boolean | "true" | "false" }) {
   return (
-    <div className="flex-shrink-0 w-[320px] md:w-[380px] bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7 backdrop-blur-sm mx-3 select-none">
+    <div aria-hidden={ariaHidden} className="flex-shrink-0 w-[320px] md:w-[380px] bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7 backdrop-blur-sm mx-3 select-none">
       <StarRating count={t.rating} />
       <p className="text-white/85 text-sm md:text-base leading-relaxed mb-5 font-light italic">
         &ldquo;{t.quote}&rdquo;
@@ -150,9 +150,13 @@ export function TestimonialsSection() {
       {/* Row 1 — scrolls left */}
       <div className="mb-5 overflow-hidden" ref={track1Ref}>
         <div className="flex marquee-left w-max">
-          {/* Duplicate the list for seamless loop */}
-          {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+          {/* Original list for SEO */}
+          {TESTIMONIALS.map((t, i) => (
             <TestimonialCard key={i} t={t} />
+          ))}
+          {/* Duplicate list hidden from screen readers/SEO */}
+          {TESTIMONIALS.map((t, i) => (
+            <TestimonialCard key={`dup-${i}`} t={t} aria-hidden="true" />
           ))}
         </div>
       </div>
@@ -160,8 +164,13 @@ export function TestimonialsSection() {
       {/* Row 2 — scrolls right (opposite direction, offset start) */}
       <div className="overflow-hidden" ref={track2Ref}>
         <div className="flex marquee-right w-max">
-          {[...TESTIMONIALS.slice(4), ...TESTIMONIALS, ...TESTIMONIALS.slice(0, 4)].map((t, i) => (
+          {/* Original mixed list for SEO */}
+          {[...TESTIMONIALS.slice(4), ...TESTIMONIALS.slice(0, 4)].map((t, i) => (
             <TestimonialCard key={i} t={t} />
+          ))}
+          {/* Duplicate mixed list hidden from screen readers/SEO */}
+          {[...TESTIMONIALS.slice(4), ...TESTIMONIALS.slice(0, 4)].map((t, i) => (
+            <TestimonialCard key={`dup2-${i}`} t={t} aria-hidden="true" />
           ))}
         </div>
       </div>
