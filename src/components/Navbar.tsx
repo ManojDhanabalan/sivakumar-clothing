@@ -10,12 +10,13 @@ export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Products", href: "#products" },
-    { name: "About Us", href: "#about" },
-    { name: "Why Us", href: "#why-us" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "Products", href: "/#products" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "About Us", href: "/#about" },
+    { name: "Why Us", href: "/#why-us" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
